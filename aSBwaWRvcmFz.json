@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "xda-developers.com",
+        "xdaforums.com",
+        "rule34video.com"
+      ]
+    }
+  ]
+}
