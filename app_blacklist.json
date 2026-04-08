@@ -44,6 +44,12 @@
         "ru.perekrestok.app",
         "ru.magnit.app.android"
       ]
+    },
+    {
+      "process_name": [
+        "BsgLauncher.exe",
+        "EscapeFromTarkov.exe"
+      ]
     }
   ]
 }
