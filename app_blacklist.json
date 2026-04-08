@@ -48,7 +48,10 @@
     {
       "process_name": [
         "BsgLauncher.exe",
-        "EscapeFromTarkov.exe"
+        "EscapeFromTarkov.exe",
+        "BEService.exe",
+        "BEService_64.exe",
+        "EscapeFromTarkov_BE.exe"
       ]
     }
   ]
