@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "rules": [
+    {
+      "process_name": [
+        "BsgLauncher.exe",
+        "EscapeFromTarkov.exe",
+        "BEService.exe",
+        "BEService_64.exe",
+        "EscapeFromTarkov_BE.exe"
+      ]
+    }
+  ]
+}
