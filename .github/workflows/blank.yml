@@ -1,0 +1,62 @@
+name: Build SRS
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '*.json'
+      - '.github/workflows/build-srs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install sing-box
+        run: |
+          curl -fsSL https://sing-box.app/install.sh | sh -s -- --version 1.12.0
+
+      - name: Compile JSON to SRS
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p srs
+          shopt -s nullglob
+
+          found=0
+          for file in *.json; do
+            found=1
+            base="${file%.json}"
+            echo "Compiling $file -> srs/$base.srs"
+            sing-box rule-set compile --output "srs/$base.srs" "$file"
+          done
+
+          if [ "$found" -eq 0 ]; then
+            echo "No JSON files found in repository root"
+            exit 1
+          fi
+
+      - name: Commit updated SRS
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- srs; then
+            echo "No SRS changes"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add srs/*.srs
+          git commit -m "chore: rebuild srs"
+          git push
