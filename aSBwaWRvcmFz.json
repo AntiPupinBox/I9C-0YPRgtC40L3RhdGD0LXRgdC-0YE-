@@ -8,6 +8,9 @@
         "rule34video.com",
         "raw.githubusercontent.com",
         "bunnyinfra.net"
+      ],
+      "ip_cidr": [
+        "91.105.192.100"
       ]
     }
   ]
