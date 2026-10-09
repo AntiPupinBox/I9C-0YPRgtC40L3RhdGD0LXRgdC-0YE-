@@ -24,7 +24,7 @@ jobs:
 
       - name: Install sing-box
         run: |
-          curl -fsSL https://sing-box.app/install.sh | sh -s -- --version 1.12.0
+          curl -fsSL https://sing-box.app/install.sh | sh -s -- --version 1.14.2
 
       - name: Compile JSON to SRS
         shell: bash
