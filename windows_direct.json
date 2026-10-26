@@ -7,7 +7,8 @@
         "EscapeFromTarkov.exe",
         "BEService.exe",
         "BEService_64.exe",
-        "EscapeFromTarkov_BE.exe"
+        "EscapeFromTarkov_BE.exe",
+        "Mordhau-Win64-Shipping.exe"
       ]
     }
   ]
