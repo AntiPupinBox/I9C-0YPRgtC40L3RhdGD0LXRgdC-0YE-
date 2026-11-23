@@ -97,7 +97,8 @@
         "today.maxi",
         "vesnasoft.teleform",
         "www.metro.com",
-        "com.notcvnt.rknhardering"
+        "com.notcvnt.rknhardering",
+        "com.android.vending"
       ],
       "package_name_regex": [
         "^com\\.avito.*",
