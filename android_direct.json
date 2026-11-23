@@ -110,7 +110,8 @@
         "^com\\.yandex.*"
       ],
       "domain_suffix": [
-        "googleapis.com"
+        "play.googleapis.com",
+        "play-fe.googleapis.com"
       ]
     }
   ]
