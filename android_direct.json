@@ -108,6 +108,9 @@
         "^com\\.vkontakte.*",
         "^com\\.wildberries.*",
         "^com\\.yandex.*"
+      ],
+      "domain_suffix": [
+        "googleapis.com"
       ]
     }
   ]
